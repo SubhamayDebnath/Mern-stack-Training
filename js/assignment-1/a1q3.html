@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 1 - question 3</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        div{
+            height: 100dvh;
+            width: 100dvw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        button{
+            padding:10px 20px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: teal;
+            color: white;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Check You are adult or not</h1>
+        <button class="btn">Check</button>
+    </div>
+    <script>
+        const button=document.querySelector(".btn");
+        button.addEventListener("click",()=>{
+            const age=parseInt(prompt("Enter your age"));
+            if(age){
+                const result=age >= 18 ? 'adult ' : 'Child';
+                alert(result);
+            }else{
+                alert("Invalid input");
+            }
+            
+        });
+    </script>
+</body>
+</html>
