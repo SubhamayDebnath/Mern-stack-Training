@@ -7,7 +7,7 @@ function arrayFun(arr){
 
 console.log(arrayFun([1,2,3,4]))
 
-function arrayFun2(arr){
+const  arrayFun2 =(arr)=>{
     return [arr[0], arr[arr.length-1]]
 }
 
