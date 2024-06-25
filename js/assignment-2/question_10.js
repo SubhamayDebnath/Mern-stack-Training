@@ -2,14 +2,20 @@
 
 const arr1=[10,20,30]
 const arr2=[40,50,60]
-const result=[]
+
+const result=[...arr1,...arr2]
+console.log("method 1")
+console.log(result)
+
+const result2=[]
 const concatenatesTwoArr=(arr1,arr2)=>{
     for(let i=0;i<arr1.length;i++){
-        result.push(arr1[i]);
+        result2.push(arr1[i]);
     }
     for(let j=0;j<arr2.length;j++){
-        result.push(arr2[j]);
+        result2.push(arr2[j]);
     }
-    return result
+    return result2
 }
+console.log("method 2")
 console.log(concatenatesTwoArr(arr1,arr2))
