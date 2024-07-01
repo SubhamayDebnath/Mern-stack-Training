@@ -7,11 +7,10 @@
 // maximum retry count.
 // d. Demonstrate the function by calling fetchDataWithRetry with a URL and handling the
 // resolved data or errors.
-
-function fetchDataWithRetry(url, maxRetryCount) {
+const fetchDataWithRetry=(url, maxRetryCount)=>{
     let retryCount = 0;
   
-    function fetchData() {
+    const fetchData=()=>{
       return new Promise((resolve, reject) => {
         function fetchOnce() {
           fetch(url)
@@ -25,10 +24,10 @@ function fetchDataWithRetry(url, maxRetryCount) {
             .catch(error => {
               retryCount++;
               if (retryCount <= maxRetryCount) {
-                console.log(`Retrying (${retryCount}/${maxRetryCount})...`);
+                console.log(`(${retryCount}/${maxRetryCount})`);
                 fetchOnce();
               } else {
-                reject(`Failed to fetch data after ${maxRetryCount} retries. Last error: ${error}`);
+                reject(`Failed to fetch data after ${maxRetryCount} . Last error: ${error}`);
               }
             });
         }
